@@ -1,0 +1,42 @@
+version: '3.3'
+services:
+  node_1:
+    image: random_pedersen
+    environment:
+      - PORT=7000
+      - NODE_ID=1
+      - NUM_NODES=3
+      - PROJECT=random_pedersen
+      - SERVICE=node
+      - MPC_THRESHOLD=0.66
+    ports:
+      - 7001:7000
+    container_name: random_pedersen_node_1
+    hostname: random_pedersen_node_1
+  node_2:
+    image: random_pedersen
+    environment:
+      - PORT=7000
+      - NODE_ID=2
+      - NUM_NODES=3
+      - PROJECT=random_pedersen
+      - SERVICE=node
+      - MPC_THRESHOLD=0.66
+    ports:
+      - 7002:7000
+    container_name: random_pedersen_node_2
+    hostname: random_pedersen_node_2
+  node_3:
+      image: random_pedersen
+      environment:
+        - PORT=7000
+        - NODE_ID=3
+        - NUM_NODES=3
+        - PROJECT=random_pedersen
+        - SERVICE=node
+        - MPC_THRESHOLD=0.66
+      ports:
+        - 7003:7000
+      container_name: random_pedersen_node_3
+      hostname: random_pedersen_node_3
+  
