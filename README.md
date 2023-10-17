@@ -4,6 +4,8 @@
 
 The project introduces a proof of concept to create a decentralized, secure, and tamper-proof random number generation system using Pedersen commitments and multi-party computation. Traditionally, Pedersen commitments are used in commit-reveal schemes, enabling a party to commit to a value without revealing it. The project extends this concept to the decentralized domain, by using a group of non-related peers to collaboratively generate an aggregated commitment for a random value. Leveraging the homomorphic properties of Pedersen commitments, the system calculates an aggregated random value without any participant having to disclose their individual input until the reveal stage.
 
+Decentralized random generators can enable DeFi protocols and their users to participate in yield farming and liquidity provisions without fear of manipulation. By generating random numbers in a decentralized manner, DeFi protocols can distribute rewards, allocate resources, and conduct auctions fairly.
+
 ## Project Description
 
 The system involves a network of nodes $`(A_1...A_N)`$ collaborating to create an aggregated commitment for a random value. Each participating node generates a random number $`(R_1...R_N)`$ and a corresponding Pedersen commitment $`(C_1...C_N)`$. These commitments are aggregated into a single commitment $`C_A`$ corresponding to the combined random values $`(R_A = R_1 + ... + R_N)`$, without revealing any individual random value.
